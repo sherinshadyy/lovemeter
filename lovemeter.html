@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Meter 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(255, 105, 135, 0.3);
+      text-align: center;
+      max-width: 350px;
+      user-select: none;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #ff4e72;
+      margin-bottom: 10px;
+      font-size: 2.8rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0 30px;
+    }
+
+    #lovePercentage {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #ff4e72;
+      margin-bottom: 10px;
+      font-family: 'Pacifico', cursive;
+      user-select: text;
+    }
+
+    #loveMessage {
+      font-size: 1.3rem;
+      color: #ff6f91;
+      min-height: 60px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #ff4e72;
+      color: white;
+      border: none;
+      padding: 14px 40px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255, 78, 114, 0.5);
+    }
+
+    button:hover {
+      background: #ff2c55;
+      box-shadow: 0 6px 18px rgba(255, 44, 85, 0.7);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Love Meter 💖</h1>
+    <p>Tap the button to see how much I love you!</p>
+    <div id="lovePercentage">--%</div>
+    <div id="loveMessage"></div>
+    <button onclick="showLove()">Check Love 💘</button>
+  </div>
+
+  <script>
+    const messages = [
+      "enta hob hayaty",
+      "100% obsessed with you! 😍",
+      "hetet samaka mashweya",
+      "gozy w abo 3yaly ❤️‍🔥",
+      "my first and lasttt💓",
+      "bo8ashty",
+      "bamoot feek",
+      "Forever and always, baby! 💕",
+      "I’d choose you in every universe! ✨",
+      "sale7nyyy",
+    ];
+
+function showLove() {
+  // Random love percentage between 100 and 110 for extra sweetness
+  const percentage = Math.floor(Math.random() * 11) + 100; 
+  const message = messages[Math.floor(Math.random() * messages.length)];
+
+  document.getElementById('lovePercentage').textContent = percentage + '%';
+  document.getElementById('loveMessage').textContent = message;
+}
+
+  </script>
+</body>
+</html>
